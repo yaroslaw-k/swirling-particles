@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Пример Canvas на весь экран</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #myCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .settings-panel {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .settings-panel input {
+            margin-bottom: 5px;
+            display: block;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<div class="settings-panel">
+
+    <label for="numberOfPoints">Number of Points:</label>
+    <input type="number" id="numberOfPoints" placeholder="Number of Points" value="1500">
+
+    <label for="maxLength">Max Length:</label>
+    <input type="number" id="maxLength" placeholder="Max Length" value="300">
+
+    <label for="lengthVariation">Length Variation:</label>
+    <input type="number" id="lengthVariation" placeholder="Length Variation" value="20">
+
+    <label for="maxRotationSpeed">Max Rotation Speed:</label>
+    <input type="number" id="maxRotationSpeed" placeholder="Max Rotation Speed" value="0.012">
+
+    <label for="rotationSpeedVariation">Rotation Speed Variation:</label>
+    <input type="number" id="rotationSpeedVariation" placeholder="Rotation Speed Variation" value="0.005">
+
+    <label for="timeIncrement">Time Increment:</label>
+    <input type="number" id="timeIncrement" placeholder="Time Increment" value="0.1">
+
+    <label for="dotRadius">Dot Radius:</label>
+    <input type="number" id="dotRadius" placeholder="Dot Radius" value="1">
+
+    <label for="fluctuationAmplitude">Fluctuation Amplitude:</label>
+    <input type="number" id="fluctuationAmplitude" placeholder="Fluctuation Amplitude" value="20">
+
+    <label for="backgroundColor">Background Color:</label>
+    <input type="color" id="backgroundColor" value="#000000">
+
+    <label for="dotColor">Dot Color:</label>
+    <input type="color" id="dotColor" value="#FFFFFF">
+
+    <label for="startAtZeroAngle" style="display: flex">Start at 0 Angle:
+        <input type="checkbox" style="width: 20px;" id="startAtZeroAngle">
+    </label>
+
+
+    <button id="startButton">Start</button>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
