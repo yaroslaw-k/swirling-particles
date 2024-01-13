@@ -93,20 +93,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-document.getElementById("startButton").addEventListener("click", function() {
-
+// Define the function that needs to be called on input change
+function onInputChange() {
     function hexToRgb(hex) {
-        // Убедимся, что строка начинается с символа #
+        // Ensure the string starts with #
         if (hex.charAt(0) === '#') {
             hex = hex.substring(1);
         }
 
-        // Преобразуем шестнадцатеричные значения в десятичные
+        // Convert hex values to decimal
         const r = parseInt(hex.substring(0, 2), 16);
         const g = parseInt(hex.substring(2, 4), 16);
         const b = parseInt(hex.substring(4, 6), 16);
 
-        // Возвращаем строку в формате RGB
+        // Return the RGB format string
         return `rgb(${r}, ${g}, ${b})`;
     }
 
@@ -115,12 +115,21 @@ document.getElementById("startButton").addEventListener("click", function() {
     const lengthVariation = parseInt(document.getElementById("lengthVariation").value);
     const maxRotationSpeed = parseFloat(document.getElementById("maxRotationSpeed").value);
     const rotationSpeedVariation = parseFloat(document.getElementById("rotationSpeedVariation").value);
-    const timeIncrement = parseFloat(document.getElementById("timeIncrement").value);
+    const timeIncrement = parseFloat(document.getElementById("fluctuationFrequency").value);
     const dotRadius = parseFloat(document.getElementById("dotRadius").value);
     const fluctuationAmplitude = parseFloat(document.getElementById("fluctuationAmplitude").value);
     const backgroundColor = document.getElementById("backgroundColor").value;
     const dotColor = hexToRgb(document.getElementById("dotColor").value);
     const startAtZeroAngle = document.getElementById("startAtZeroAngle").checked;
 
+    // Call your animation start function here
     startAnimation(numberOfPoints, maxLength, lengthVariation, maxRotationSpeed, rotationSpeedVariation, timeIncrement, dotRadius, fluctuationAmplitude, backgroundColor, dotColor, startAtZeroAngle);
+}
+
+// Get all input elements within the settings panel
+const inputs = document.querySelectorAll(".settings-panel input");
+
+// Add the change event listener to each input
+inputs.forEach(input => {
+    input.addEventListener('change', onInputChange);
 });

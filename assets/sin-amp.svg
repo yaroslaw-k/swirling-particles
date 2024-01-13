@@ -1,0 +1,7 @@
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+    <!-- Синусоида -->
+    <path d="M 0,20 Q 5,0 10,20 T 20,20 T 30,20 T 40,20" stroke="black" stroke-width="1" fill="none"/>
+    <!-- Красная стрелка, обозначающая амплитуду -->
+    <line x1="20" y1="20" x2="20" y2="11" stroke="red" stroke-width="1"/>
+    <polygon points="20,10 18,14 22,14" fill="red"/>
+</svg>
