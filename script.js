@@ -133,3 +133,13 @@ const inputs = document.querySelectorAll(".settings-panel input");
 inputs.forEach(input => {
     input.addEventListener('change', onInputChange);
 });
+
+document.getElementById("hideButton").addEventListener("click", function() {
+    if (document.getElementById("settingsPanel").style.display === 'none') {
+        document.getElementById("settingsPanel").style.display = 'block';
+    } else
+    {
+        document.getElementById("settingsPanel").style.display = 'none';
+    }
+});
+

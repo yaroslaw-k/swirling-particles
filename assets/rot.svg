@@ -1,8 +1,8 @@
 <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-    <!-- Часть круга, образующая тело стрелки -->
+
     <path d="M 5,20 a 15,15 0 0,1 30,0" fill="none" stroke="red" stroke-width="1"/>
-    <!-- Головка стрелки у правого конца, направленная вниз -->
+
     <polygon points="35,25 33,20 37,20" fill="red"/>
-    <!-- Точка в центре -->
+
     <circle cx="20" cy="20" r="1" fill="black"/>
 </svg>

@@ -21,8 +21,35 @@ body, html {
     border-radius: 5px;
 }
 
-.settings-panel input {
+.setting-group {
+    display: flex;
+    align-items: center;
     margin-bottom: 5px;
-    display: block;
-    width: 200px;
+    border-bottom: 1px solid white;
+}
+
+.setting-group span {
+    margin-right: 10px;
+    width: 70px;
+}
+
+.setting-group input[type="range"] {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.startAtZeroAngle{
+    margin-left: 10px;
+}
+
+.toggle-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
 }

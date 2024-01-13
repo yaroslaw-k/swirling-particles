@@ -1,0 +1,10 @@
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+    <!-- Первая точка, самая маленькая -->
+    <circle cx="7" cy="20" r="1" fill="black"/>
+    <!-- Вторая точка, немного больше -->
+    <circle cx="14" cy="20" r="2" fill="black"/>
+    <!-- Третья точка, ещё больше -->
+    <circle cx="22" cy="20" r="3" fill="red"/>
+    <!-- Четвертая точка, самая большая -->
+    <circle cx="31" cy="20" r="4" fill="black"/>
+</svg>
